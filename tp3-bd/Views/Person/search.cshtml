@@ -1,0 +1,44 @@
+﻿@model tp3_bd.Models.Person
+@{
+    ViewBag.Title = "search";
+}
+
+<h2>search</h2>
+
+@{
+    if (ViewBag.notFound)
+    {
+        <div class="alert alert-danger">
+            aucune personne n'est compatible à ces informations!
+        </div>
+    }
+}
+
+<!--<form asp-action="search" method="post" >
+    <div asp-validation-summary=”ModelOnly” class=”text-danger”></div>
+    <div class=”form-group”>
+        <label asp-for="FirstName" class=”control-label”></label>
+        <input asp-for="FirstName" class=”form-control” />
+    </div>
+    <div class=”form-group”>
+        <label asp-for=”Country” class=”control-label”></label>
+        <input asp-for=”Country” class=”form-control” />
+    </div><div class=”form-group”>
+        <input type="submit" value=”submit” class=”btn btn-primary” />
+    </div>
+</form>
+    -->
+@using (Html.BeginForm("search", "Person", FormMethod.Post))
+{
+    <div>
+        @Html.TextBoxFor(p => p.FirstName)
+    </div>
+    <div>
+        @Html.TextBoxFor(p => p.Country)
+    </div>
+    <div class=”form-group”>
+        <input type="submit" value=”submit” class=”btn btn-primary” />
+    </div>
+
+
+}

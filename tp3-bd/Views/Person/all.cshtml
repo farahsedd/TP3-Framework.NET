@@ -1,0 +1,59 @@
+﻿@Model List<tp3_bd.Models.Person>
+@{
+    ViewBag.Title = "all";
+}
+
+<h2>all</h2>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-1">
+            Id
+        </div>
+        <div class="col-sm-1">
+            FirstName
+        </div>
+        <div class="col-sm-1">
+            LastName
+        </div>
+        <div class="col-3">
+            Email
+        </div>
+        <div class="col-sm-5">
+            Image
+        </div>
+        <div class="col-sm-1">
+            Country
+        </div>
+    </div>
+    @{ foreach (tp3_bd.Models.Person p in Model)
+        {
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-1">
+                    @p.Id
+                </div>
+                <div class="col-sm-1">
+                    @p.FirstName
+                </div>
+                <div class="col-sm-1">
+                    @p.LastName
+                </div>
+                <div class="col-3">
+                    @p.Email
+                </div>
+                <div class="col-sm-5">
+                    @p.Image
+                </div>
+                <div class="col-sm-1">
+                    @p.Country
+                </div>
+            </div>
+        </div>
+            }
+
+        }
+        </div>

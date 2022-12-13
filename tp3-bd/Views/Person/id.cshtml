@@ -1,0 +1,65 @@
+﻿@Model tp3_bd.Models.Person
+@{
+    ViewBag.Title = "id";
+}
+
+<h2>id</h2>
+@{
+    if (@Model == null)
+    {
+        <div class="alert alert-danger">
+            Cet id est invalide!
+        </div>
+    }
+    else
+    {
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-1">
+            Id
+        </div>
+        <div class="col-sm-1">
+            FirstName
+        </div>
+        <div class="col-sm-1">
+            LastName
+        </div>
+        <div class="col-3">
+            Email
+        </div>
+        <div class="col-sm-5">
+            Image
+        </div>
+        <div class="col-sm-1">
+            Country
+        </div>
+    </div>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-1">
+                @Model.Id
+            </div>
+            <div class="col-sm-1">
+                @Model.FirstName
+            </div>
+            <div class="col-sm-1">
+                @Model.LastName
+            </div>
+            <div class="col-3">
+                @Model.Email
+            </div>
+            <div class="col-sm-5">
+                @Model.Image
+            </div>
+            <div class="col-sm-1">
+                @Model.Country
+            </div>
+        </div>
+        </div>
+
+        }
+  }
+        
